@@ -67,7 +67,7 @@ At the end of this file we can see how it is configured to install docker in the
 
 Get an image from Vagrant web:
 
-***vagrant box add ubuntu/bionic64 --provider virtualbox***
+> ***-- vagrant box add ubuntu/bionic64 --provider virtualbox***
 <p align="center"><img src="img/media/image6.png" style="width:4.98958in;height:2.07292in" /></p>
 
 *(This is the box (image) that it is going to be use as basis to install docker)*
