@@ -86,7 +86,7 @@ With the following command, the ubuntu box downloaded will be started applying t
 
 > ***-- vagrant up***
 
-<p align="center"><img src="img/media/image8.png" style="width:5.85876in;height:0.83854in" /></p>
+<p align="center"><img src="img/media/image8.png"  width="600" style="height:0.83854in" /></p>
 
 <span class="underline">7º Step</span>
 
