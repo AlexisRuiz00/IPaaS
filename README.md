@@ -96,4 +96,4 @@ SSH connection:
 
 > ***-- vagrant ssh***
 
-<p align="center"><img src="img/media/image9.png" style="width:5.55729in;height:2.95144in" /></p>
+<p align="center"><img src="img/media/image9.png" height="300" width="600"/></p>
