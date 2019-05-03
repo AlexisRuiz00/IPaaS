@@ -61,13 +61,14 @@ At the end of this file we can see how it is configured to install docker in the
 
 > ***-- sudo apt install virtualbox***
 
-<img src="img/media/image5.png" style="width:6.27083in;height:1.13889in" />
+<p align="center"><img src="img/media/image5.png" style="width:6.27083in;height:1.13889in" /></p>
 
 <span class="underline">4º Step:</span>
 
 Get an image from Vagrant web:
 
-***vagrant box add ubuntu/bionic64 --provider virtualbox***<img src="img/media/image22.png" style="width:4.98958in;height:2.07292in" />
+***vagrant box add ubuntu/bionic64 --provider virtualbox***
+<p align="center"><img src="img/media/image6.png" style="width:4.98958in;height:2.07292in" /></p>
 
 *(This is the box (image) that it is going to be use as basis to install docker)*
 
@@ -77,7 +78,7 @@ Checking that everything has worked correctly:
 
 > ***-- vagrant box list***
 
-<p align="center"><img src="img/media/image6.png" style="width:6.27083in;height:1.51389in" /></p>
+<p align="center"><img src="img/media/image7.png" style="width:6.27083in;height:1.51389in" /></p>
 
 <span class="underline">6º Step:</span>
 
@@ -85,7 +86,7 @@ With the following command, the ubuntu box downloaded will be started applying t
 
 > ***-- vagrant up***
 
-<p align="center"><img src="img/media/image7.png" style="width:5.85876in;height:0.83854in" /></p>
+<p align="center"><img src="img/media/image8.png" style="width:5.85876in;height:0.83854in" /></p>
 
 <span class="underline">7º Step</span>
 
