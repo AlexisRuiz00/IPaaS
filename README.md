@@ -37,7 +37,7 @@
 
 
 
-<p align="center">
+<div align="center">
  **[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
 
 > **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation) 3**
@@ -45,7 +45,7 @@
 > **[2- Docker applications lifecycle:](#docker-applications-lifecycle) 7**
 >
 > **[3- Docker containers: not persistent:](#docker-containers-not-persistent) 12**
-</p>
+</div>
 
 <br>
 <br>
