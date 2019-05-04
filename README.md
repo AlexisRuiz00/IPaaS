@@ -30,9 +30,9 @@
 
 &nbsp;&nbsp;&nbsp;This activity has been developed for developing the professional competence includes in the Erasmus+ project "Cloud Computing in European Schools".
 
-<br>
-<br>
-<br>
+</br>
+</br>
+</br>
 
 # Docker Index:
 
@@ -77,9 +77,10 @@ So now you must be very concentrated to follow this steps:
 
 
 
-<br>
-<br>
-<br>
+</br>
+</br>
+</br>
+
 <a name="2"></a>
 # 1- Vagrant and Docker Installation: 
 
