@@ -3,7 +3,7 @@
 
  Number: Project: 2017-1-ES01-KA202-038471
 
-<img src="/img/cofinanciadoEN.png" height="50" width="200"> <img src="/img/logoIES-Modificado.png" height="75" width="200">  
+<img src="/img/cofinanciadoEN.png" height="50" width="200"/> <img src="/img/logoIES-Modificado.png" height="75" width="200"/>  
 
 
 
@@ -20,7 +20,7 @@
 
 #### Author
 
-&nbsp;&nbsp;&nbsp;  This material has been produced by José Luis Rodríguez Rodríguez under the Creative Commons licence:  <img src="/img/Licencia-Tipo2.png" height="25" width="75">  
+&nbsp;&nbsp;&nbsp;  This material has been produced by José Luis Rodríguez Rodríguez under the Creative Commons licence:  <img src="/img/Licencia-Tipo2.png" height="25" width="75"/>  
 
 
 
@@ -29,19 +29,20 @@
 &nbsp;&nbsp;&nbsp; Platform as a Service (PaaS), is a cloud computing model that allows the users to develop, deploy, run and manage applications without taking care about the underlying layers. The alternatives used today focus on the use of containers which promote the **microservices based application** development approach (vs **monolithic applications**), because the different services into which we the application is separated can easily run in different containers. We will make a study of Docker, Kubernetes and OpenShift in order to develop, deploy, run and manage  microservices based applications.
 
 &nbsp;&nbsp;&nbsp;This activity has been developed for developing the professional competence includes in the Erasmus+ project "Cloud Computing in European Schools".
+
 <br>
 <br>
 <br>
 
 # Docker Index:
 
+**[Docker installation: virtual machine managed by Vagrant.](#1) 2**
 
-**[Docker installation: virtual machine managed by Vagrant.](#1) **
-
-> **[1- Vagrant and Docker Installation:](#2) ** <
-> **[2- Docker applications lifecycle:](#3) ** <
-> **[3- Docker containers: not persistent:](#4) ** <
-
+> **[1- Vagrant and Docker Installation:](#2) 3**
+>
+> **[2- Docker applications lifecycle:](#3) 7**
+>
+> **[3- Docker containers: not persistent:](#4) 12**
 <br>
 <br>
 <br>
