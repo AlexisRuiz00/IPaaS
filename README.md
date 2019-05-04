@@ -164,7 +164,7 @@ Upload the docker image to a repository in our account:
 
 ***-- docker push accountName/repositoryName:”imageName”***
 
-\[IMAGEN DE DOCKER PUSH V1\]
+<p align="center"><img src="img/media/image15.png" style="width:6.44329in;height:0.69271in" /></p>
 
 <span class="underline">5ºStep</span>
 
@@ -174,7 +174,7 @@ Upload the docker image to a repository in our account:
 
 ***-- docker pull accountName/repositoryName:”imageName”***
 
-<p align="center"><img src="img/media/image15.png" style="width:6.44329in;height:0.69271in" /></p>
+<p align="center"><img src="img/media/image16.png" style="width:6.44329in;height:0.69271in" /></p>
 
 <span class="underline">6º Step</span>
 
@@ -182,21 +182,21 @@ Run a container from the downloaded image:
 
 > **-- docker run --name “containerName” -d -p “ports” accountName/repositoryName:”imageName”**
 
-<p align="center"><img src="img/media/image16.png" style="width:6.5in;height:0.3125in" /></p>
+<p align="center"><img src="img/media/image17.png" style="width:6.5in;height:0.3125in" /></p>
 
 <span class="underline">7º Step</span>
 
 Connect locally using links browser (text browser) and check the web page:
 
-<p align="center"><img src="img/media/image17.png" style="width:4.60938in;height:0.41612in" /></p>
+<p align="center"><img src="img/media/image18.png" style="width:4.60938in;height:0.41612in" /></p>
 
-<p align="center"><img src="img/media/image18.png" style="width:6.75in;height:1.69792in" /></p>
+<p align="center"><img src="img/media/image19.png" style="width:6.75in;height:1.69792in" /></p>
 
 <span class="underline">8º Step</span>
 
 Modify the application:
 
-<p align="center"><img src="img/media/image19.png" style="width:4.75521in;height:1.31985in" /></p>
+<p align="center"><img src="img/media/image20.png" style="width:4.75521in;height:1.31985in" /></p>
 
 For every new version we create, we need to follow this steps:
 
@@ -206,7 +206,7 @@ Create the new image (in the development environment).
 
 ***-- docker build -t accountName/aplicacionweb:v2***
 
-<p align="center"><img src="img/media/image20.png" style="width:6.55035in;height:1.78646in" /></p>
+<p align="center"><img src="img/media/image21.png" style="width:6.55035in;height:1.78646in" /></p>
 
 <span class="underline">8.2º Step</span>
 
@@ -214,7 +214,7 @@ Upload the new image.
 
 ***-- docker push accountName/aplicacionesweb:v2***
 
-<p align="center"><img src="img/media/image21.png" style="width:6.30922in;height:0.53646in" /></p>
+<p align="center"><img src="img/media/image22.png" style="width:6.30922in;height:0.53646in" /></p>
 
 <span class="underline">8.3º Step</span>
 
@@ -222,7 +222,7 @@ Download the new image to the production environment.
 
 ***-- docker pull accountName/aplicacionesweb:v2***
 
-<p align="center"><img src="img/media/image22.png" style="width:6.21875in;height:0.64583in" /></p>
+<p align="center"><img src="img/media/image23.png" style="width:6.21875in;height:0.64583in" /></p>
 
 <span class="underline">8.4º Step</span>
 
@@ -230,7 +230,7 @@ Delete the current container (in the production environment):
 
 > ***-- docker container rm -f aplweb***
 
-<p align="center"><img src="img/media/image23.png" style="width:6.27083in;height:1.18056in" /></p>
+<p align="center"><img src="img/media/image24.png" style="width:6.27083in;height:1.18056in" /></p>
 
 <span class="underline">8.5º Step</span>
 
@@ -238,4 +238,4 @@ Run the new container:
 
 > ***-- docker run --name aplweb2 -d -p 80:80 accountName/aplicacionesweb:v2***
 
-<p align="center"><img src="img/media/image24.png" style="width:6.21354in;height:1.70654in" /></p>
+<p align="center"><img src="img/media/image25.png" style="width:6.21354in;height:1.70654in" /></p>
