@@ -38,11 +38,11 @@
 
 **[Docker installation: virtual machine managed by Vagrant.](#1) **
 
-> **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation)(#2) **
+> **[1- Vagrant and Docker Installation:](#2) **
 >
-> **[2- Docker applications lifecycle:](#docker-applications-lifecycle)(#3) **
+> **[2- Docker applications lifecycle:](#3) **
 >
-> **[3- Docker containers: not persistent:](#docker-containers-not-persistent)(#4) **
+> **[3- Docker containers: not persistent:](#4) **
 
 <br>
 <br>
