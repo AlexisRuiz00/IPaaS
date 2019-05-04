@@ -36,9 +36,9 @@
 
 # Docker Index:
 
-**[Docker installation: virtual machine managed by Vagrant.](#1)
+**[Docker installation: virtual machine managed by Vagrant](#1).**
 
-> **[1- Vagrant and Docker Installation:](#2)
+> **[1- Vagrant and Docker Installation](#2):**
 >
 > **[2- Docker applications lifecycle:](#3)
 >
