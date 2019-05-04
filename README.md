@@ -5,9 +5,17 @@
 
 <img src="/img/cofinanciadoEN.png" height="50" width="200"> <img src="/img/logoIES-Modificado.png" height="75" width="200">  
 
-### **<span class="underline">Docker</span>**
+**<span class="underline">Docker</span>**
 
-### **<span class="underline">1- Docker installation: virtual machine managed by Vagrant.</span>**
+**[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
+
+> **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation) 3**
+>
+> **[2- Docker applications lifecycle:](#docker-applications-lifecycle) 7**
+>
+> **[3- Docker containers: not persistent:](#docker-containers-not-persistent) 12**
+
+# Docker installation: virtual machine managed by Vagrant.
 
 The first step of our installation of docker is to have already installed the virtual machine manager called Vagrant. **But what is Vagrant?**
 
@@ -97,3 +105,137 @@ SSH connection:
 > ***-- vagrant ssh***
 
 <p align="center"><img src="img/media/image9.png" height="300" width="600"/></p>
+
+Docker version:
+
+HACER CAPTURA CON DOCKER VERSION
+
+# 2- Docker applications lifecycle: 
+
+After installing an environment with Docker, we are going to develop Docker images and deploy containers to run our applications.
+
+<span class="underline">1º Step:</span>
+
+First of all we are going to create a directory called “public\_html” and inside of it we need to create an other thing, a web page called “index.html”. It will be served by a web server that will run in a Docker container.
+
+<p align="center"><img src="img/media/image10.png" style="width:6.24981in;height:0.94271in" /></p>
+
+<span class="underline">2º Step:</span>
+
+Now we need to create a docker image, but before doing that, we are going to create a Dockerfile in which define the following instructions that will be executed in the moment of building the docker image:
+
+-   Update repositories and install Apache2
+
+-   Clean and remove packages
+
+-   Copy our webpage to the public directory of Apache (/var/www/html).
+
+-   
+
+Dockerfile must be created in the vagrant fold of /home
+
+<p align="center"><img src="img/media/image11.png" style="width:6.29167in;height:1.66667in" /></p>
+
+<span class="underline">3ºStep:</span>
+
+Create the docker image. using the following command:
+
+***-- docker build -t accountName/aplicacionesweb:v1***
+
+<p align="center"><img src="img/media/image12.png" style="width:6.461in;height:0.93229in" /></p>
+
+And use this command to see which images you have:
+
+> ***-- docker image ls***
+
+<p align="center"><img src="img/media/image13.png" style="width:6.34394in;height:0.88021in" /></p>
+
+<span class="underline">4ºStep</span>
+
+Upload our docker image to a repository in Dockerhub ([<span class="underline">hub.docker.com</span>](https://hub.docker.com/))
+
+Log in our dockerhub account:
+
+***-- docker login***
+
+<p align="center"><img src="img/media/image14.png" style="width:6.07292in;height:1.0625in" /></p>
+
+Upload the docker image to a repository in our account:
+
+***-- docker push accountName/repositoryName:”imageName”***
+
+\[IMAGEN DE DOCKER PUSH V1\]
+
+<span class="underline">5ºStep</span>
+
+<span class="underline"> </span>
+
+<span class="underline"> </span> Download a docker image from dockerhub:
+
+***-- docker pull accountName/repositoryName:”imageName”***
+
+<p align="center"><img src="img/media/image15.png" style="width:6.44329in;height:0.69271in" /></p>
+
+<span class="underline">6º Step</span>
+
+Run a container from the downloaded image:
+
+> **-- docker run --name “containerName” -d -p “ports” accountName/repositoryName:”imageName”**
+
+<p align="center"><img src="img/media/image16.png" style="width:6.5in;height:0.3125in" /></p>
+
+<span class="underline">7º Step</span>
+
+Connect locally using links browser (text browser) and check the web page:
+
+<p align="center"><img src="img/media/image17.png" style="width:4.60938in;height:0.41612in" /></p>
+
+<p align="center"><img src="img/media/image18.png" style="width:6.75in;height:1.69792in" /></p>
+
+<span class="underline">8º Step</span>
+
+Modify the application:
+
+<p align="center"><img src="img/media/image19.png" style="width:4.75521in;height:1.31985in" /></p>
+
+For every new version we create, we need to follow this steps:
+
+<span class="underline">8.1º Step</span>
+
+Create the new image (in the development environment).
+
+***-- docker build -t accountName/aplicacionweb:v2***
+
+<p align="center"><img src="img/media/image20.png" style="width:6.55035in;height:1.78646in" /></p>
+
+<span class="underline">8.2º Step</span>
+
+Upload the new image.
+
+***-- docker push accountName/aplicacionesweb:v2***
+
+<p align="center"><img src="img/media/image21.png" style="width:6.30922in;height:0.53646in" /></p>
+
+<span class="underline">8.3º Step</span>
+
+Download the new image to the production environment.
+
+***-- docker pull accountName/aplicacionesweb:v2***
+
+<p align="center"><img src="img/media/image22.png" style="width:6.21875in;height:0.64583in" /></p>
+
+<span class="underline">8.4º Step</span>
+
+Delete the current container (in the production environment):
+
+> ***-- docker container rm -f aplweb***
+
+<p align="center"><img src="img/media/image23.png" style="width:6.27083in;height:1.18056in" /></p>
+
+<span class="underline">8.5º Step</span>
+
+Run the new container:
+
+> ***-- docker run --name aplweb2 -d -p 80:80 accountName/aplicacionesweb:v2***
+
+<p align="center"><img src="img/media/image24.png" style="width:6.21354in;height:1.70654in" /></p>
