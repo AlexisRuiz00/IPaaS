@@ -156,9 +156,10 @@ HACER CAPTURA CON DOCKER VERSION
 
 
 
-<br>
-<br>
-<br>
+
+</br>
+</br>
+</br>
 <a name="3"></a>
 # 2- Docker applications lifecycle:
 
@@ -293,6 +294,7 @@ Run the new container:
 
 
 
-<br>
-<br>
-<br>
+
+</br>
+</br>
+</br>
