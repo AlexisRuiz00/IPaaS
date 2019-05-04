@@ -38,7 +38,9 @@
 
 
 <div align="center">
-<p align="left> **[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2** </p>
+<p align="left> 
+**[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
+</p>
 
 <p align="left>
 > **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation) 3**
