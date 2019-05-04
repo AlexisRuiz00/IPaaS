@@ -31,7 +31,12 @@
 &nbsp;&nbsp;&nbsp;This activity has been developed for developing the professional competence includes in the Erasmus+ project "Cloud Computing in European Schools".
 <br>
 <br>
-**<span class="underline">Docker</span>**
+<br>
+<br>
+<br>
+<br>
+
+*<span class="underline">Docker</span>*
 
 **[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
 
