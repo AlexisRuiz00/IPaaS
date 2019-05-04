@@ -307,7 +307,7 @@ We are going to create a container with a MySQL server; the data is stored in a 
 
 ***docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
 
-<img src="img/media/image3.png" style="width:6.0625in;height:1.5625in" />
+<img src="img/media/image26.png" style="width:6.0625in;height:1.5625in" />
 
 <span class="underline">2º Step:</span>
 
@@ -319,7 +319,7 @@ Create a database called dbtest.
 
 ***create database dbtest;***
 
-<img src="img/media/image17.png" style="width:6.26042in;height:2.83333in" />
+<img src="img/media/image27.png" style="width:6.26042in;height:2.83333in" />
 
 <span class="underline">3º Step:</span>
 
@@ -335,4 +335,4 @@ Delete the container(1º command), create a new container(2º command) and then 
 
 ***show databases;***
 
-<img src="img/media/image18.png" style="width:6.40989in;height:3.26563in" />
+<img src="img/media/image28.png" style="width:6.40989in;height:3.26563in" />
