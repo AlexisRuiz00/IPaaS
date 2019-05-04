@@ -35,7 +35,7 @@
 
 # Docker Index:
 
-<p align="center>
+<p align="center">
 
 **[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
 
