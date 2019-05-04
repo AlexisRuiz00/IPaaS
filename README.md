@@ -36,13 +36,13 @@
 
 # Docker Index:
 
-**[Docker installation: virtual machine managed by Vagrant.](#1) **
+**[Docker installation: virtual machine managed by Vagrant.](#1)
 
-> **[1- Vagrant and Docker Installation:](#2) **
+> **[1- Vagrant and Docker Installation:](#2)
 >
-> **[2- Docker applications lifecycle:](#3) **
+> **[2- Docker applications lifecycle:](#3)
 >
-> **[3- Docker containers: not persistent:](#4) **
+> **[3- Docker containers: not persistent:](#4)
 <br>
 <br>
 <br>
@@ -74,7 +74,8 @@ The main commands for Vagrant are:
 
 So now you must be very concentrated to follow this steps:
 
-<a name="2"># 1- Vagrant and Docker Installation: </a>
+<a name="2"></a>
+# 1- Vagrant and Docker Installation: 
 
 <span class="underline">1º Step:</span>
 
@@ -143,7 +144,8 @@ Docker version:
 
 HACER CAPTURA CON DOCKER VERSION
 
-<a name="3"># 2- Docker applications lifecycle: </a>
+<a name="3"></a>
+# 2- Docker applications lifecycle:
 
 After installing an environment with Docker, we are going to develop Docker images and deploy containers to run our applications.
 
