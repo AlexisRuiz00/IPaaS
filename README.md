@@ -156,10 +156,10 @@ HACER CAPTURA CON DOCKER VERSION
 
 
 
+</br>
+</br>
+</br>
 
-</br>
-</br>
-</br>
 <a name="3"></a>
 # 2- Docker applications lifecycle:
 
@@ -290,9 +290,6 @@ Run the new container:
 > ***-- docker run --name aplweb2 -d -p 80:80 accountName/aplicacionesweb:v2***
 
 <p align="center"><img src="img/media/image25.png" style="width:6.21354in;height:1.70654in" /></p>
-
-
-
 
 
 </br>
