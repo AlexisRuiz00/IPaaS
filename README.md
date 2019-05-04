@@ -295,3 +295,44 @@ Run the new container:
 </br>
 </br>
 </br>
+
+<a name="4"></a>
+# 3- Docker containers: not persistent: 
+
+This section explains the need to use persistent volumes due to data in containers are lost.
+
+<span class="underline">1º Step:</span>
+
+We are going to create a container with a MySQL server; the data is stored in a persistent volume.
+
+***docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+
+<img src="img/media/image3.png" style="width:6.0625in;height:1.5625in" />
+
+<span class="underline">2º Step:</span>
+
+Create a database called dbtest.
+
+***docker exec -it some-mysql bash***
+
+***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+
+***create database dbtest;***
+
+<img src="img/media/image17.png" style="width:6.26042in;height:2.83333in" />
+
+<span class="underline">3º Step:</span>
+
+Delete the container(1º command), create a new container(2º command) and then Verify that the database is still created(3º, 4º and 5º command).
+
+***docker container rm -f some-mysql***
+
+***docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+
+***docker exec -it some-mysql bash***
+
+***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+
+***show databases;***
+
+<img src="img/media/image18.png" style="width:6.40989in;height:3.26563in" />
