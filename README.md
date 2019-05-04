@@ -36,7 +36,7 @@
 <br>
 <br>
 
-*<span class="underline">Docker</span>*
+*Docker*
 
 **[Docker installation: virtual machine managed by Vagrant.](#docker-installation-virtual-machine-managed-by-vagrant.) 2**
 
