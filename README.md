@@ -1,5 +1,5 @@
  **Project: “Cloud Computing in European schools”**  
-<img src="/img/cloud-computing-logoproject.jpg" height="100" width="170">
+<img src="/img/cloud-computing-logoproject.jpg" height="100" width="170"/>
 
  Number: Project: 2017-1-ES01-KA202-038471
 
@@ -36,13 +36,13 @@
 
 # Docker Index:
 
-**[Docker installation: virtual machine managed by Vagrant.](#1) 2**
+**[Docker installation: virtual machine managed by Vagrant.](#1) **
 
-> **[1- Vagrant and Docker Installation:](#2) 3**
+> **[1- Vagrant and Docker Installation:](#2) **
 >
-> **[2- Docker applications lifecycle:](#3) 7**
+> **[2- Docker applications lifecycle:](#3) **
 >
-> **[3- Docker containers: not persistent:](#4) 12**
+> **[3- Docker containers: not persistent:](#4) **
 <br>
 <br>
 <br>
