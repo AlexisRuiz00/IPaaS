@@ -43,18 +43,15 @@
 </p>
 
 <p align="left>
-> **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation) 3**
-> 
+> **[1- Vagrant and Docker Installation:](#vagrant-and-docker-installation) 3** > 
 </p>
           
 <p align="left>
-> **[2- Docker applications lifecycle:](#docker-applications-lifecycle) 7**
->
+> **[2- Docker applications lifecycle:](#docker-applications-lifecycle) 7** >
 </p>
           
 <p align="left>
-> **[3- Docker containers: not persistent:](#docker-containers-not-persistent) 12**
->
+> **[3- Docker containers: not persistent:](#docker-containers-not-persistent) 12** >
 </p>
 </div>
 
