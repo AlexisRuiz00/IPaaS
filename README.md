@@ -147,13 +147,6 @@ SSH connection:
 
 <p align="center"><img src="img/media/image9.png" height="300" width="600"/></p>
 
-Docker version:
-
-HACER CAPTURA CON DOCKER VERSION
-
-
-
-
 
 
 </br>
