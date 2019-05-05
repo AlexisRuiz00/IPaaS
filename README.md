@@ -189,7 +189,7 @@ Now we need to create a docker image, but before doing that, we are going to cre
 
 Create the docker image. using the following command:
 
-***-- docker build -t accountName/aplicacionesweb:v1***
+> ***-- docker build -t accountName/aplicacionesweb:v1***
 
 <p align="center"><img src="img/media/image12.png" style="width:6.461in;height:0.93229in" /></p>
 
@@ -205,7 +205,7 @@ Upload our docker image to a repository in Dockerhub ([<span class="underline">h
 
 Log in our dockerhub account:
 
-***-- docker login***
+> ***-- docker login***
 
 <p align="center"><img src="img/media/image14.png" style="width:6.07292in;height:1.0625in" /></p>
 
@@ -303,7 +303,7 @@ This section explains the need to use persistent volumes due to data in containe
 
 We are going to create a container with a MySQL server; the data is stored in a persistent volume.
 
-> ***docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+> ***-- docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
 
 <img src="img/media/image26.png" style="width:6.0625in;height:1.5625in" />
 
@@ -311,11 +311,11 @@ We are going to create a container with a MySQL server; the data is stored in a 
 
 Create a database called dbtest.
 
-> ***docker exec -it some-mysql bash***
+> ***-- docker exec -it some-mysql bash***
 
-> ***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+> ***-- root@75544a024f9b:/\# mysql -u root -p -h localhost***
 
-> ***create database dbtest;***
+> ***-- create database dbtest;***
 
 <img src="img/media/image27.png" style="width:6.26042in;height:2.83333in" />
 
@@ -323,14 +323,14 @@ Create a database called dbtest.
 
 Delete the container(1º command), create a new container(2º command) and then Verify that the database is still created(3º, 4º and 5º command).
 
-> ***docker container rm -f some-mysql***
+> ***-- docker container rm -f some-mysql***
 
-> ***docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+> ***-- docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
 
-> ***docker exec -it some-mysql bash***
+> ***-- docker exec -it some-mysql bash***
 
-> ***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+> ***-- root@75544a024f9b:/\# mysql -u root -p -h localhost***
 
-> ***show databases;***
+> ***-- show databases;***
 
 <img src="img/media/image28.png" style="width:6.40989in;height:3.26563in" />
