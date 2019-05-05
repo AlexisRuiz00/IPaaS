@@ -181,9 +181,7 @@ Now we need to create a docker image, but before doing that, we are going to cre
 
 -   Copy our webpage to the public directory of Apache (/var/www/html).
 
--   
-
-Dockerfile must be created in the vagrant fold of /home
+> Dockerfile must be created in the vagrant fold of /home
 
 <p align="center"><img src="img/media/image11.png" style="width:6.29167in;height:1.66667in" /></p>
 
@@ -213,7 +211,7 @@ Log in our dockerhub account:
 
 Upload the docker image to a repository in our account:
 
-***-- docker push accountName/repositoryName:”imageName”***
+> ***-- docker push accountName/repositoryName:”imageName”***
 
 <p align="center"><img src="img/media/image15.png" style="width:6.44329in;height:0.69271in" /></p>
 
@@ -223,7 +221,7 @@ Upload the docker image to a repository in our account:
 
 <span class="underline"> </span> Download a docker image from dockerhub:
 
-***-- docker pull accountName/repositoryName:”imageName”***
+> ***-- docker pull accountName/repositoryName:”imageName”***
 
 <p align="center"><img src="img/media/image16.png" style="width:6.44329in;height:0.69271in" /></p>
 
@@ -255,7 +253,7 @@ For every new version we create, we need to follow this steps:
 
 Create the new image (in the development environment).
 
-***-- docker build -t accountName/aplicacionweb:v2***
+> ***-- docker build -t accountName/aplicacionweb:v2***
 
 <p align="center"><img src="img/media/image21.png" style="width:6.55035in;height:1.78646in" /></p>
 
@@ -263,7 +261,7 @@ Create the new image (in the development environment).
 
 Upload the new image.
 
-***-- docker push accountName/aplicacionesweb:v2***
+> ***-- docker push accountName/aplicacionesweb:v2***
 
 <p align="center"><img src="img/media/image22.png" style="width:6.30922in;height:0.53646in" /></p>
 
@@ -271,7 +269,7 @@ Upload the new image.
 
 Download the new image to the production environment.
 
-***-- docker pull accountName/aplicacionesweb:v2***
+> ***-- docker pull accountName/aplicacionesweb:v2***
 
 <p align="center"><img src="img/media/image23.png" style="width:6.21875in;height:0.64583in" /></p>
 
@@ -305,7 +303,7 @@ This section explains the need to use persistent volumes due to data in containe
 
 We are going to create a container with a MySQL server; the data is stored in a persistent volume.
 
-***docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+> ***docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
 
 <img src="img/media/image26.png" style="width:6.0625in;height:1.5625in" />
 
@@ -313,11 +311,11 @@ We are going to create a container with a MySQL server; the data is stored in a 
 
 Create a database called dbtest.
 
-***docker exec -it some-mysql bash***
+> ***docker exec -it some-mysql bash***
 
-***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+> ***root@75544a024f9b:/\# mysql -u root -p -h localhost***
 
-***create database dbtest;***
+> ***create database dbtest;***
 
 <img src="img/media/image27.png" style="width:6.26042in;height:2.83333in" />
 
@@ -325,14 +323,14 @@ Create a database called dbtest.
 
 Delete the container(1º command), create a new container(2º command) and then Verify that the database is still created(3º, 4º and 5º command).
 
-***docker container rm -f some-mysql***
+> ***docker container rm -f some-mysql***
 
-***docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
+> ***docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL\_ROOT\_PASSWORD=asdasd -d mysql***
 
-***docker exec -it some-mysql bash***
+> ***docker exec -it some-mysql bash***
 
-***root@75544a024f9b:/\# mysql -u root -p -h localhost***
+> ***root@75544a024f9b:/\# mysql -u root -p -h localhost***
 
-***show databases;***
+> ***show databases;***
 
 <img src="img/media/image28.png" style="width:6.40989in;height:3.26563in" />
