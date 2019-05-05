@@ -20,7 +20,7 @@
 
 #### Author
 
-&nbsp;&nbsp;&nbsp;  This material has been produced by Nico Fernández, Miguel Rodriguez, Alexis Ruiz under the Creative Commons licence:  <img src="/img/Licencia-Tipo2.png" height="25" width="75"/>  
+&nbsp;&nbsp;&nbsp;  This material has been produced by Nico Fernández, Miguel Rodríguez, Alexis Ruiz under the Creative Commons licence:  <img src="/img/Licencia-Tipo2.png" height="25" width="75"/>  
 
 
 
