@@ -420,7 +420,6 @@ To download Minikube and install it, use the following commands:
 >
 > ***&& rm minikube***
 
-</br>
 <p align="center"><img src="img/media/image30.png" style="width:6.8092in;height:1.65104in"/></p>
 </br>
 </br>
@@ -436,8 +435,6 @@ Same for kubectl:
 > ***&& sudo cp kubectl /usr/local/bin/***
 >
 > ***&& rm kubectl***
-</br>
-</br>
 
 <p align="center"><img src="img/media/image31.png" style="width:6.25in;height:1.48944in" /></p>
 </br>
@@ -458,9 +455,8 @@ Start the virtual machine with minikube (this step start the installation of the
 
 For checking the installation we can use this command:
 
-***-- kubectl get nodes***
+> ***-- kubectl get nodes***
 
-</br>
 <p align="center"><img src="img/media/image33.png" style="width:5.90632in;height:0.84896in" /></p>
 
 </br>
@@ -471,12 +467,12 @@ For checking the installation we can use this command:
 Last step, add the component ingress:
 </br>
 </br>
-***-- minikube addons enable ingress***
+> ***-- minikube addons enable ingress***
 
-</br>
 <p align="center"><img src="img/media/image34.png" style="width:5.97396in;height:0.67926in" /></p>
 
 
+</br>
 </br>
 </br>
 
@@ -489,10 +485,6 @@ Let's see how minikube automatically deploys pods when anyone of the running pod
 First, create a pod from a dockerhub image
 
 > ***-- kubectl run pagweb --image alexisruiz00/aplicacionesweb:v1***
-
-
-</br>
-</br>
 
 <p align="center"><img src="img/media/image35.png" style="width:5.9375in;height:0.39063in" /></p>
 
@@ -507,7 +499,6 @@ Once the pod is running, let’s delete it to see how minikube instantly deploys
 
 > ***-- kubectl delete pod/pagweb-59dc644f4d-cqlrn***
 
-</br>
 <p align="center"><img src="img/media/image36.png" style="width:5.90104in;height:2.74225in" /></p>
 
 </br>
@@ -533,9 +524,9 @@ The amount of running pods can be increased whenever it is needed just using thi
 > ***-- kubectl scale deploy “deployName” --replicas=”amountWanted”***
 
 </br>
-</br>
 
 For checking it:
+</br>
 
 > ***-- kubectl get pod -o wide***
 
