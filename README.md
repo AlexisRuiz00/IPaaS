@@ -43,8 +43,7 @@
 > **[2- Docker applications lifecycle:](#3)**
 >
 > **[3- Docker containers: not persistent](#4):**
-<br>
-<br>
+
 </br>
 </br>
 
