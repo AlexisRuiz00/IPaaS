@@ -355,7 +355,13 @@ Delete the container(1º command), create a new container(2º command) and then 
 
 
 <a name="1k"></a>
+
+
+*KUBERNETES*
+</br>
+
 # 1. Introduction
+</br>
 
 Nowadays, the most common scenario of an application deployment would be:
 
@@ -366,6 +372,8 @@ Nowadays, the most common scenario of an application deployment would be:
 3.  A set of databases that make persistent our app.
 
 4.  Another load balancer that works internally between the instances and databases sets.
+</br>
+</br>
 
 This deployment scenario imply a lot of configuration time and big costs. But, thanks to Kubernetes we can deploy it saving this costs.
 
@@ -373,9 +381,7 @@ Kubernetes its an open code system that allows the deployment, scalability, and 
 
 This system can be broken down in the five following elements:
 
--   **Pod:** Minimum instance used in kubernetes. It will consist at least of one docker image, but can have more than one image even a database.
-
-> This element is stateless and allows us to break down our full application in its differents process that will be running in differents pods that will interactuate between them.
+-   **Pod:** Minimum instance used in kubernetes. It will consist at least of one docker image, but can have more than one image even a database. This element is stateless and allows us to break down our full application in its differents process that will be running in differents pods that will interactuate between them.
 
 -   **Deployment:** is the template that will instruct Kubernetes how to create the associated pods, how to boot the Docker container, how many replicas we want by default, etc.
 
@@ -384,15 +390,19 @@ This system can be broken down in the five following elements:
 -   **Volumes & Persistent volumes:** For apps which need storage.
 
 -   **Ingress Controllers:** Redirects the traffic to the services.
+</br>
+</br>
 
 <p align="center"><img src="img/media/image29.png" style="width:5.86458in;height:3.07292in" /></p>
 
 <a name="2k"></a>
 # 2. Installation and start.
+</br>
 
 We are going to work with minikube which is an environment to use Kubernetes in our laptop without having a production environment, either to use it as a developer, or to test it.
 
 To download Minikube and install it, use the following commands:
+</br>
 
 > ***curl -Lo minikube [<span class="underline">https://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64</span>](https://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64)***
 >
@@ -402,10 +412,14 @@ To download Minikube and install it, use the following commands:
 >
 > ***&& rm minikube***
 
+</br>
 <p align="center"><img src="img/media/image30.png" style="width:6.8092in;height:1.65104in" /></p>
+</br>
+</br>
 
 Same for kubectl:
 
+</br>
 > ***curl -Lo kubectl [<span class="underline">https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl</span>](https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl)***
 >
 > ***&& chmod +x kubectl***
@@ -413,27 +427,43 @@ Same for kubectl:
 > ***&& sudo cp kubectl /usr/local/bin/***
 >
 > ***&& rm kubectl***
+</br>
+</br>
 
 <p align="center"><img src="img/media/image31.png" style="width:6.25in;height:1.48944in" /></p>
+</br>
+</br>
 
 Start the virtual machine with minikube (this step start the installation of the cluster).
+</br>
 
 ***-- minikube start --vm-driver=virtualbox***
 
 <p align="center"><img src="img/media/image32.png" style="width:6.30419in;height:1.81771in" /></p>
 
+</br>
+</br>
 For checking the installation we can use this command:
 
 ***-- kubectl get nodes***
 
+</br>
 <p align="center"><img src="img/media/image33.png" style="width:5.90632in;height:0.84896in" /></p>
 
-Last step, add the component ingress:
+</br>
+</br>
 
+Last step, add the component ingress:
+</br>
+</br>
 ***-- minikube addons enable ingress***
 
+</br>
 <p align="center"><img src="img/media/image34.png" style="width:5.97396in;height:0.67926in" /></p>
 
+
+</br>
+</br>
 # 3. Working with minikube
 
 <a name="3k"></a>
