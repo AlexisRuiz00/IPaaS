@@ -360,7 +360,7 @@ Delete the container(1º command), create a new container(2º command) and then 
 # **KUBERNETES**
 </br>
 
-# 1. Introduction
+## 1. Introduction
 </br>
 
 Nowadays, the most common scenario of an application deployment would be:
@@ -396,7 +396,15 @@ This system can be broken down in the five following elements:
 <p align="center"><img src="img/media/image29.png" style="width:5.86458in;height:3.07292in" /></p>
 
 <a name="2k"></a>
-# 2. Installation and start.
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+## 2. Installation and start.
 </br>
 
 We are going to work with minikube which is an environment to use Kubernetes in our laptop without having a production environment, either to use it as a developer, or to test it.
@@ -446,6 +454,7 @@ Start the virtual machine with minikube (this step start the installation of the
 </br>
 </br>
 </br>
+</br>
 
 For checking the installation we can use this command:
 
@@ -454,6 +463,7 @@ For checking the installation we can use this command:
 </br>
 <p align="center"><img src="img/media/image33.png" style="width:5.90632in;height:0.84896in" /></p>
 
+</br>
 </br>
 </br>
 </br>
@@ -470,10 +480,10 @@ Last step, add the component ingress:
 </br>
 </br>
 
-# 3. Working with minikube
+## 3. Working with minikube
 
 <a name="3k"></a>
-## 3.1 Fault tolerance
+### 3.1 Fault tolerance
 
 Let's see how minikube automatically deploys pods when anyone of the running pods fails.
 First, create a pod from a dockerhub image
@@ -486,13 +496,23 @@ First, create a pod from a dockerhub image
 
 <p align="center"><img src="img/media/image35.png" style="width:5.9375in;height:0.39063in" /></p>
 
+
+</br>
+</br>
+</br>
+
 Once the pod is running, let’s delete it to see how minikube instantly deploys a new pod.
 
 > ***-- kubectl get pods***
 
 > ***-- kubectl delete pod/pagweb-59dc644f4d-cqlrn***
 
+</br>
 <p align="center"><img src="img/media/image36.png" style="width:5.90104in;height:2.74225in" /></p>
+
+</br>
+</br>
+</br>
 
 The resource Deployment can be also checked:
 
@@ -500,11 +520,20 @@ The resource Deployment can be also checked:
 
 <p align="center"><img src="img/media/image37.png" style="width:5.95313in;height:0.97686in" /></p>
 
-## 3.2 Scalability
+
+</br>
+</br>
+</br>
+</br>
+
+### 3.2 Scalability
 
 The amount of running pods can be increased whenever it is needed just using this command:
 
 > ***-- kubectl scale deploy “deployName” --replicas=”amountWanted”***
+
+</br>
+</br>
 
 For checking it:
 
@@ -518,7 +547,7 @@ For checking it:
 </br>
 </br>
 
-## 3.3 Load Balancing
+### 3.3 Load Balancing
 
 Minikube distributes the workload between all the pods.
 
@@ -528,11 +557,19 @@ To see it, first step, create a resource Service to access to the app:
 
 <p align="center"><img src="img/media/image39.png" style="width:6.07375in;height:0.58854in" /></p>
 
+</br>
+</br>
+</br>
+
 Second, get the port of the application:
 
 > ***-- kubectl get services***
 
 <p align="center"><img src="img/media/image40.png" style="width:5.99479in;height:0.96345in" /></p>
+
+</br>
+</br>
+</br>
 
 Third, get the ip of the cluster where the app is running:
 
@@ -540,9 +577,16 @@ Third, get the ip of the cluster where the app is running:
 
 <p align="center"><img src="img/media/image41.png" style="width:5.97396in;height:1.73925in" /></p>
 
+</br>
+</br>
+</br>
+
 Finally, try to access to the web app, and see how internally the service redirect the connection to one of the running pods. The service will be redirecting the connection to the pod with less load.
 
 > ***-- http://”ip”:”port”***
+
+</br>
+</br>
 
 This case:
 
@@ -556,7 +600,7 @@ This case:
 </br>
 </br>
 
-## 3.4 Continuous updates
+### 3.4 Continuous updates
 
 A quality of minikube, is the fact that we can make continious updates without shutting down the VM or making us run another one, with this simpy command:
 
@@ -570,7 +614,7 @@ A quality of minikube, is the fact that we can make continious updates without s
 </br>
 </br>
 
-## 3.5 Rollback
+### 3.5 Rollback
 
 Minikube allows us to get previous version of the build. For this we can use this command:
 
@@ -584,7 +628,7 @@ Minikube allows us to get previous version of the build. For this we can use thi
 </br>
 </br>
 
-## 3.6 Routing
+### 3.6 Routing
 
 It is possible to access to the app by a DNS name. We will use nip.io domain. It is necessary to create a file ingress.yaml.
 
