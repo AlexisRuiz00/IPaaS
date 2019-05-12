@@ -45,9 +45,6 @@
 > **[3- Docker containers: not persistent](#4):**
 <br>
 <br>
-<br>
-
-</br>
 </br>
 </br>
 
@@ -99,7 +96,7 @@ So now you must be very concentrated to follow this steps:
 </br>
 
 <a name="2"></a>
-# 1- Vagrant and Docker Installation: 
+## 1- Vagrant and Docker Installation: 
 
 <span class="underline">1º Step:</span>
 
@@ -171,7 +168,7 @@ SSH connection:
 </br>
 
 <a name="3"></a>
-# 2- Docker applications lifecycle:
+## 2- Docker applications lifecycle:
 
 After installing an environment with Docker, we are going to develop Docker images and deploy containers to run our applications.
 
@@ -305,7 +302,7 @@ Run the new container:
 </br>
 
 <a name="4"></a>
-# 3- Docker containers: not persistent: 
+## 3- Docker containers: not persistent: 
 
 This section explains the need to use persistent volumes due to data in containers are lost.
 
