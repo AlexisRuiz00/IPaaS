@@ -357,7 +357,7 @@ Delete the container(1º command), create a new container(2º command) and then 
 <a name="1k"></a>
 
 
-*KUBERNETES*
+****KUBERNETES****
 </br>
 
 # 1. Introduction
@@ -413,13 +413,13 @@ To download Minikube and install it, use the following commands:
 > ***&& rm minikube***
 
 </br>
-<p align="center"><img src="img/media/image30.png" style="width:6.8092in;height:1.65104in" /></p>
+<p align="center"><img src="img/media/image30.png" style="width:6.8092in;height:1.65104in"/></p>
 </br>
 </br>
 
 Same for kubectl:
-
 </br>
+
 > ***curl -Lo kubectl [<span class="underline">https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl</span>](https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl)***
 >
 > ***&& chmod +x kubectl***
