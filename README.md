@@ -47,6 +47,23 @@
 <br>
 <br>
 
+</br>
+</br>
+</br>
+
+# Kubernetes Index:
+
+**[KUBERNETES](#1k).**
+
+> **[1- Introduction](#2k):**
+>
+> **[2- Installation & Start](#3k)**
+>
+> **[3- Working with minikube](#4k):**
+<br>
+<br>
+<br>
+
 <a name="1"></a>
 # Docker installation: virtual machine managed by Vagrant.
 
@@ -327,3 +344,219 @@ Delete the container(1º command), create a new container(2º command) and then 
 > ***-- show databases;***
 
 <img src="img/media/image28.png" style="width:6.40989in;height:3.26563in" />
+
+<br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<a name="1k"></a>
+# 1. Introduction
+
+Nowadays, the most common scenario of an application deployment would be:
+
+1.  A set of instances for running our app.
+
+2.  An external load balancer for these instances.
+
+3.  A set of databases that make persistent our app.
+
+4.  Another load balancer that works internally between the instances and databases sets.
+
+This deployment scenario imply a lot of configuration time and big costs. But, thanks to Kubernetes we can deploy it saving this costs.
+
+Kubernetes its an open code system that allows the deployment, scalability, and application management in containers in an automated way.
+
+This system can be broken down in the five following elements:
+
+-   **Pod:** Minimum instance used in kubernetes. It will consist at least of one docker image, but can have more than one image even a database.
+
+> This element is stateless and allows us to break down our full application in its differents process that will be running in differents pods that will interactuate between them.
+
+-   **Deployment:** is the template that will instruct Kubernetes how to create the associated pods, how to boot the Docker container, how many replicas we want by default, etc.
+
+-   **Service:** Pods are not visible neither accessible from outside themselves, for solving that is for what are the services, which act as load balancer and allows to access from outside and and inside (kubernetes node network).
+
+-   **Volumes & Persistent volumes:** For apps which need storage.
+
+-   **Ingress Controllers:** Redirects the traffic to the services.
+
+<p align="center"><img src="img/media/image29.png" style="width:5.86458in;height:3.07292in" /></p>
+
+<a name="2k"></a>
+# 2. Installation and start.
+
+We are going to work with minikube which is an environment to use Kubernetes in our laptop without having a production environment, either to use it as a developer, or to test it.
+
+To download Minikube and install it, use the following commands:
+
+> ***curl -Lo minikube [<span class="underline">https://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64</span>](https://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64)***
+>
+> ***&& chmod +x minikube***
+>
+> ***&& sudo cp minikube /usr/local/bin/***
+>
+> ***&& rm minikube***
+
+<p align="center"><img src="img/media/image30.png" style="width:6.8092in;height:1.65104in" /></p>
+
+Same for kubectl:
+
+> ***curl -Lo kubectl [<span class="underline">https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl</span>](https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl)***
+>
+> ***&& chmod +x kubectl***
+>
+> ***&& sudo cp kubectl /usr/local/bin/***
+>
+> ***&& rm kubectl***
+
+<p align="center"><img src="img/media/image31.png" style="width:6.25in;height:1.48944in" /></p>
+
+Start the virtual machine with minikube (this step start the installation of the cluster).
+
+***-- minikube start --vm-driver=virtualbox***
+
+<p align="center"><img src="img/media/image32.png" style="width:6.30419in;height:1.81771in" /></p>
+
+For checking the installation we can use this command:
+
+***-- kubectl get nodes***
+
+<p align="center"><img src="img/media/image33.png" style="width:5.90632in;height:0.84896in" /></p>
+
+Last step, add the component ingress:
+
+***-- minikube addons enable ingress***
+
+<p align="center"><img src="img/media/image34.png" style="width:5.97396in;height:0.67926in" /></p>
+
+# 3. Working with minikube
+
+<a name="3k"></a>
+## 3.1 Fault tolerance
+
+Let's see how minikube automatically deploys pods when anyone of the running pods fails.
+
+First, create a pod from a dockerhub image
+
+***-- kubectl run pagweb --image alexisruiz00/aplicacionesweb:v1***
+
+<p align="center"><img src="img/media/image35.png" style="width:5.9375in;height:0.39063in" /></p>
+
+Once the pod is running, let’s delete it to see how minikube instantly deploys a new pod.
+
+***-- kubectl get pods***
+
+***-- kubectl delete pod/pagweb-59dc644f4d-cqlrn***
+
+<p align="center"><img src="img/media/image36.png" style="width:5.90104in;height:2.74225in" /></p>
+
+The resource Deployment can be also checked:
+
+***-- kubectl get deploy***
+
+<p align="center"><img src="img/media/image37.png" style="width:5.95313in;height:0.97686in" /></p>
+
+## 3.2 Scalability
+
+The amount of running pods can be increased whenever it is needed just using this command:
+
+***-- kubectl scale deploy “deployName” --replicas=”amountWanted”***
+
+For checking it:
+
+***-- kubectl get pod -o wide***
+
+<p align="center"><img src="img/media/image38.png" style="width:5.94271in;height:1.90397in" /></p>
+
+## 3.3 Load Balancing
+
+Minikube distributes the workload between all the pods.
+
+To see it, first step, create a resource Service to access to the app:
+
+***-- kubectl expose deployment “deploymentName” --port=80 --type=NodePortI***
+
+<p align="center"><img src="img/media/image39.png" style="width:6.07375in;height:0.58854in" /></p>
+
+Second, get the port of the application:
+
+***-- kubectl get services***
+
+<p align="center"><img src="img/media/image40.png" style="width:5.99479in;height:0.96345in" /></p>
+
+Third, get the ip of the cluster where the app is running:
+
+***-- minikube ip***
+
+<p align="center"><img src="img/media/image41.png" style="width:5.97396in;height:1.73925in" /></p>
+
+Finally, try to access to the web app, and see how internally the service redirect the connection to one of the running pods. The service will be redirecting the connection to the pod with less load.
+
+***-- http://”ip”:”port”***
+
+This case:
+
+***-- http://192.168.99.100:80***
+
+<p align="center"><img src="img/media/image42.png" style="width:5.875in;height:1.55208in" /></p>
+
+## 3.4 Continuous updates
+
+A quality of minikube, is the fact that we can make continious updates without shutting down the VM or making us run another one, with this simpy command:
+
+***-- kubectl set image deployment pagweb pagweb=alexisruiz00/aplicacionesweb:v2***
+
+<p align="center"><img src="img/media/image43.png" style="width:6.50145in;height:0.81771in" /></p>
+
+## 3.5 Rollback
+
+Minikube allows us to get previous version of the build. For this we can use this command:
+
+***-- kubectl rollout undo deployment/pagweb***
+
+<p align="center"><img src="img/media/image44.png" style="width:6.49479in;height:1.75535in" /></p>
+
+## 3.6 Routing
+
+It is possible to access to the app by a DNS name. We will use nip.io domain. It is necessary to create a file ingress.yaml.
+
+It must contains the following information:
+
+<p align="center">
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pagweb
+spec:
+  rules:
+  - host: pagweb.172.22.200.165.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: pagweb
+          servicePort: 80
+</p>
+
+
+<p align="center"><img src="img/media/image45.png" style="width:5.96875in;height:3.16667in" /></p>
+
+Create the resource ingress:
+
+***-- kubectl create -f ingress.yaml***
+
+<p align="center"><img src="img/media/image46.png" style="width:5.97396in;height:0.84459in" /></p>
+
+Check it:
+
+***-- kubectl get ingress***
+
+<p align="center"><img src="img/media/image47.png" style="width:5.96875in;height:0.80208in" /></p>
+
+<p align="center"><img src="img/media/image48.png" style="width:5.98438in;height:1.60972in" /></p>
