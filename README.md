@@ -513,6 +513,7 @@ The resource Deployment can be also checked:
 </br>
 </br>
 </br>
+</br>
 
 ### 3.2 Scalability
 
@@ -530,6 +531,7 @@ For checking it:
 <p align="center"><img src="img/media/image38.png" style="width:5.94271in;height:1.90397in" /></p>
 
 
+</br>
 </br>
 </br>
 </br>
@@ -587,6 +589,7 @@ This case:
 </br>
 </br>
 </br>
+</br>
 
 ### 3.4 Continuous updates
 
@@ -611,6 +614,7 @@ Minikube allows us to get previous version of the build. For this we can use thi
 <p align="center"><img src="img/media/image44.png" style="width:6.49479in;height:1.75535in" /></p>
 
 
+</br>
 </br>
 </br>
 </br>
@@ -642,16 +646,27 @@ spec:
 
 <p align="center"><img src="img/media/image45.png" style="width:5.96875in;height:3.16667in" /></p>
 
+</br>
+</br>
+</br>
+
 Create the resource ingress:
 
 > ***-- kubectl create -f ingress.yaml***
 
 <p align="center"><img src="img/media/image46.png" style="width:5.97396in;height:0.84459in" /></p>
 
+</br>
+</br>
+</br>
+
 Check it:
 
 > ***-- kubectl get ingress***
 
 <p align="center"><img src="img/media/image47.png" style="width:5.96875in;height:0.80208in" /></p>
+
+</br>
+</br>
 
 <p align="center"><img src="img/media/image48.png" style="width:5.98438in;height:1.60972in" /></p>
