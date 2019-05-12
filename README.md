@@ -326,4 +326,4 @@ Delete the container(1º command), create a new container(2º command) and then 
 
 > ***-- show databases;***
 
-<img src="img/media/image28.png" style="width:6.40989in;height:3.26563in" />
+<p align="center"> <img src="img/media/image28.png" height="150" width="600" />/<p>
